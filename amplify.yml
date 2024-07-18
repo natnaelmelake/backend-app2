@@ -1,0 +1,40 @@
+version: 1.0
+applications:
+  - backend:
+      phases:
+        preBuild:
+          commands:
+            - echo "🔧 Starting backend pre-build phase..."
+            - echo "⬇️ Installing pipenv and virtualenv..."
+            - pip3 install --user pipenv virtualenv
+            - export PATH=$PATH:~/.local/bin
+        build:
+          commands:
+            - echo "🔨 Building the backend..."
+            - echo "🐍 Creating Python virtual environment..."
+            - python3.8 -m venv py38env
+            - source py38env/bin/activate
+            - echo "📦 Installing Python dependencies..."
+            - pip install -r requirements.txt
+            - amplifyPush --simple
+      artifacts:
+        baseDirectory: /
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - 'py38env/lib/python3.8/site-packages/**/*'
+    frontend:
+      phases:
+        build:
+          commands:
+            - echo "🔨 Building the frontend..."
+            - npm install
+            - npm run build
+      artifacts:
+        baseDirectory: public
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - 'node_modules/**/*'

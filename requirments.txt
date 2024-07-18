@@ -1,0 +1,16 @@
+boto3
+botocore
+certifi
+pip
+pipenv
+PyYAML
+redis
+requests
+s3transfer
+setuptools
+six
+sqlacodegen
+SQLAlchemy
+urllib3
+virtualenv
+zipp
