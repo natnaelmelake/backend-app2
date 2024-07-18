@@ -10,6 +10,14 @@
       "StackName": "amplify-backendapp2-dev-2f486",
       "StackId": "arn:aws:cloudformation:us-east-1:654654423740:stack/amplify-backendapp2-dev-2f486/dbf10d40-44d7-11ef-bcba-0affc746b0f9",
       "AmplifyAppId": "d1o1q487jupjq0"
+    },
+    "categories": {
+      "function": {
+        "devfunc": {
+          "deploymentBucketName": "amplify-backendapp2-dev-2f486-deployment",
+          "s3Key": "amplify-builds/devfunc-4a4a3046655238426b54-build.zip"
+        }
+      }
     }
   }
 }

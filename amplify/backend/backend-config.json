@@ -1,1 +1,27 @@
-{}
+{
+  "function": {
+    "devfunc": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_devfunc_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "devfunc"
+        }
+      ]
+    },
+    "AMPLIFY_function_devfunc_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "devfunc"
+        }
+      ]
+    }
+  }
+}
